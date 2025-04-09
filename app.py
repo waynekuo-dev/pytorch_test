@@ -16,7 +16,7 @@ from skimage.transform import resize
 @st.cache_resource
 def load_model():
     # .to(device)
-    return torch.load('./model.pt', map_location=torch.device('cpu'))
+    return torch.load('./model.pt', weights_only=False, map_location=torch.device('cpu'))
 
 
 model = load_model()
